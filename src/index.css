@@ -1622,6 +1622,19 @@ input[type=range]::-webkit-slider-thumb:hover {
   opacity: 1;
 }
 
+@media (max-width: 600px) {
+  .status-bar {
+    gap: 1rem;
+    padding: 0 1rem;
+    font-size: 0.6rem;
+  }
+  /* Hide the middle status item on very small screens to prevent overlap */
+  .status-bar .status-item:nth-child(2),
+  .status-bar .status-item:nth-child(3) {
+    display: none;
+  }
+}
+
 /* Give main content bottom padding so it doesn't hide behind the bar */
 main {
   padding-bottom: 40px;
